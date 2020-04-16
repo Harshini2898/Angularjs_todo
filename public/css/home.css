@@ -1,0 +1,28 @@
+#container{
+    text-align:center;
+    margin :15% auto;
+    letter-spacing: 4px;
+}
+#heading{
+    color:darkblue;
+    margin-bottom:20px;
+}
+.btn{
+    background-color: darkblue;
+    color:white;
+    padding:10px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    
+}
+.btn:hover{
+    background-color: blue;
+    color:white;
+}
+#reg{
+    margin-right:40px;
+}
+#login{
+    margin-left:40px;
+}
+
