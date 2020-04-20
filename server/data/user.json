@@ -1,0 +1,43 @@
+[
+    {
+        "name": "Harshini",
+        "email": "harshini2898@gmail.com",
+        "password": "harshu@08",
+        "todo": []
+    },
+    {
+        "name": "Sanju",
+        "email": "sanju@gmail.com",
+        "password": "sanju@08",
+        "todo": []
+    },
+    {
+        "name": "Aruna",
+        "email": "Arun@gmail.com",
+        "todo": []
+    },
+    {
+        "name": "Surya",
+        "email": "surya@gmail.com",
+        "pwd": "Surya@08",
+        "todo": []
+    },
+    {
+        "name": "Prahar",
+        "email": "prahar@gmail.com",
+        "pwd": "Prahar@08uio",
+        "todo": []
+    },
+    {
+        "name": "Sudheera",
+        "email": "sudheera@gmail.com",
+        "pwd": "sudheera@08",
+        "todo": []
+    },
+    {
+        "name": "Hashu",
+        "email": "hashi@gmail.com",
+        "pwd": "hashu@08",
+        "todo": []
+    }
+]

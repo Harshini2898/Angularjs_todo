@@ -1,28 +1,63 @@
+
 #container{
     text-align:center;
-    margin :15% auto;
     letter-spacing: 4px;
+    margin-top:9%;
+    height:100%;
+    
 }
 #heading{
     color:darkblue;
-    margin-bottom:20px;
-}
-.btn{
-    background-color: darkblue;
-    color:white;
-    padding:10px;
-    font-weight: bold;
-    letter-spacing: 4px;
-    
-}
-.btn:hover{
-    background-color: blue;
-    color:white;
+    margin-bottom:25px;
+    font-size:45px;
 }
 #reg{
     margin-right:40px;
 }
 #login{
     margin-left:40px;
+}
+.btn{
+    background-color: darkblue;
+    color:white;
+    padding:10px;
+    padding-left:35px;
+    padding-right:35px;
+    font-weight: bold;
+    letter-spacing: 4px;
+  
+}
+.btn:hover{
+    background-color: blue;
+    color:white;
+}
+
+
+#mouth{
+    
+    width:100%;
+    height:465px;
+    background-color: darkblue;
+    border-top-left-radius: 60%;
+
+}
+
+
+svg{
+    width:100%;
+    height:300px;
+}
+
+#quote{
+    
+    font-family: 'Luckiest Guy', cursive;
+    
+    font-weight: bold;
+    font-size:50px;
+    letter-spacing: 4px;
+    
+}
+text{
+    fill : peachpuff;
 }
 
