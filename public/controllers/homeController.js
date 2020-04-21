@@ -6,7 +6,9 @@
         var vm = this;
         vm.goToLogin = function () {
             $location.path('/login');
-
+        }
+        vm.goToRegister = function () {
+            $location.path('/register');
         }
     }
-})();
+    })();
