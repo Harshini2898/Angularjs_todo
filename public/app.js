@@ -11,7 +11,7 @@
                 resolve :
                 {
                     style : function(){
-                        angular.element(document.querySelector('head')).append('<link id="home" href="css/home.css" rel="stylesheet">');
+                        angular.element(document.querySelector('head')).append('<link href="css/home.css" rel="stylesheet">');
                     }
                 }
             })
@@ -22,7 +22,7 @@
                 resolve :
                 {
                     style : function(){
-                        angular.element(document.querySelector('head')).append('<link id="home" href="css/register.css" rel="stylesheet">');
+                        angular.element(document.querySelector('head')).append('<link  href="css/register.css" rel="stylesheet">');
                     }
                 }
                })  
@@ -32,7 +32,17 @@
                 controllerAs : 'log',
                 resolve:{
                     style : function(){
-                        angular.element(document.querySelector('head')).append('<link id="home" href="css/login.css" rel="stylesheet">')
+                        angular.element(document.querySelector('head')).append('<link  href="css/login.css" rel="stylesheet">')
+                    }
+                }
+            })
+            .when('/todo', {
+                templateUrl : 'templates/todo.html',
+                controller : 'todoController',
+                controllerAs : 'td',
+                resolve:{
+                    style : function(){
+                        angular.element(document.querySelector('head')).append('<link href = "css/todo.css" rel = "stylesheet">')
                     }
                 }
             })  

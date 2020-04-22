@@ -27,7 +27,7 @@
         var newUser = {
             name: req.body.name,
             email: req.body.email,
-            pwd: req.body.pwd,
+            password: req.body.password,
             todo: []
         };
 
@@ -36,6 +36,34 @@
         res.sendStatus(204);
     })
 
+    app.get('/api/users/:id', function(req,res){
+        var data = getUsers();
+        var matchedUser = data.filter(function(item){
+            return item.email == req.params.id;
+        });
+        if(matchedUser.length == 0){
+            res.sendStatus(404);
+        }
+        else{
+            res.send(matchedUser[0]);
+        }
+    })
+
+    app.put('/api/users/:id', function(req,res){
+        var data = getUsers();
+        var matchedUser = data.filter(function(item){
+            return item.email == req.params.id;
+        });
+        if(matchedUser.length == 0){
+            res.sendStatus(404);
+        }
+        else{
+            var userToUpdate = matchedUser[0];
+            userToUpdate.todo.push(req.body);
+            saveBookData(data);
+            res.sendStatus(204);
+        }
+    })
 
     function getUsers() {
         var data = fs.readFileSync(datafile, 'utf8');

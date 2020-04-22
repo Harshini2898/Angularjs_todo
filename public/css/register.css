@@ -1,10 +1,11 @@
-h2{
+#regHead{
     color:darkblue;
     font-weight: bold;
     margin-bottom:20px;
     letter-spacing: 4px;
 }
-span{
+
+.error{
     background-color:rgb(236, 177, 177);
     padding:10px;
     border-radius: 2px;
@@ -14,32 +15,40 @@ span{
     margin-bottom:8px;
 }
 
-form{
+#regForm{
     display:inline-block;  
-   
     text-align:left; 
 }
-#reg{
+
+
+#rgst{
     display:block;
     text-align:center;
     margin-top:150px;
     
     }
 
-.control-label{
+    .control-label{
         color:darkblue;
         font-size:18px;
         letter-spacing: 3px;
     }
+    #sub{
+  padding:10px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    }
 .btn{
     background-color: darkblue;
     color:white;
-    padding:10px;
-    font-weight: bold;
-    letter-spacing: 4px;
+  
     
 }
 .btn:hover{
     background-color: blue;
     color:white;
+}
+.btn:focus{
+    color:white;
+  
 }

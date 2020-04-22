@@ -13,18 +13,26 @@
 }
 #reg{
     margin-right:40px;
-}
-#login{
-    margin-left:40px;
-}
-.btn{
-    background-color: darkblue;
-    color:white;
     padding:10px;
     padding-left:35px;
     padding-right:35px;
     font-weight: bold;
     letter-spacing: 4px;
+}
+#login{
+    margin-left:40px;
+}
+#log{
+    padding:10px;
+    padding-left:35px;
+    padding-right:35px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+.btn{
+    background-color: darkblue;
+    color:white;
+    
   
 }
 .btn:hover{

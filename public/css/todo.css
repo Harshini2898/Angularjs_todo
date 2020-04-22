@@ -1,0 +1,74 @@
+#todoContainer{
+    text-align:center;
+    width:100%;
+    height:100%;
+    margin:0;
+}
+
+#todoHead{
+    margin-top:3%;
+    color:darkblue;
+    margin-bottom:4%;
+    font-weight:bold;
+    letter-spacing: 3px;
+}
+
+#inp{
+    text-align:center;
+    width:45%;
+    height:36px;
+    font-weight: bold;
+    font-size:18px;
+    margin-right:10px;
+    border-color: darkblue;
+    letter-spacing: 2px;
+    padding : 18px 10px;
+    border-radius: 6%;
+    color: rgb(8, 17, 105);
+}
+.btn{
+    background-color: darkblue;
+    color:white; 
+}
+.btn:hover{
+    background-color: blue;
+    color:white;
+}
+#addBtn{
+    padding:7px 10px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+#lists{
+    width:100%;
+    text-align:center;
+    margin-top:3%;
+}
+#task{
+    display:inline-block;
+   
+    padding : 12px 10px;
+    font-weight: bold;
+    font-size:18px;
+    width:50%;
+    color:white;
+    border-radius:10px;
+    letter-spacing: 3px;
+    cursor:pointer;
+}
+.grn{
+    background-image:linear-gradient(to left, rgb(2, 54, 9),rgb(7, 145, 26));
+}
+.bl{
+    background-image: linear-gradient(to left,rgb(6, 14, 83), rgb(16, 36, 218));
+}
+#del{
+    float:right;
+    padding-right:5px;
+    color:rgb(245, 79, 79);
+    font-size:20px;
+}
+.btn:focus{
+    color:white;
+  
+}

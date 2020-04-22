@@ -3,7 +3,23 @@
         "name": "Harshini",
         "email": "harshini2898@gmail.com",
         "password": "harshu@08",
-        "todo": []
+        "todo": [
+            {
+                "id": 1,
+                "task": "will complete painting",
+                "done": false
+            },
+            {
+                "id": 2,
+                "task": "Run for one hour",
+                "done": false
+            },
+            {
+                "id": 3,
+                "task": "Do nature sighting",
+                "done": false
+            }
+        ]
     },
     {
         "name": "Sanju",
@@ -12,32 +28,14 @@
         "todo": []
     },
     {
-        "name": "Aruna",
-        "email": "Arun@gmail.com",
-        "todo": []
-    },
-    {
-        "name": "Surya",
+        "name": "surya",
         "email": "surya@gmail.com",
-        "pwd": "Surya@08",
         "todo": []
     },
     {
-        "name": "Prahar",
-        "email": "prahar@gmail.com",
-        "pwd": "Prahar@08uio",
-        "todo": []
-    },
-    {
-        "name": "Sudheera",
-        "email": "sudheera@gmail.com",
-        "pwd": "sudheera@08",
-        "todo": []
-    },
-    {
-        "name": "Hashu",
-        "email": "hashi@gmail.com",
-        "pwd": "hashu@08",
+        "name": "aruna",
+        "email": "aruna@gmail.com",
+        "password": "aruna@)89",
         "todo": []
     }
 ]

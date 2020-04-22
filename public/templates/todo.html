@@ -1,0 +1,13 @@
+<div id="todoContainer">
+    <h2 id="todoHead"> Welcome user</h2>
+    <div id="addTodo">
+        <input type="text" ng-model = "td.task" id="inp" placeholder = "ADD A TASK">
+        <input type="button" value="ADD" ng-click = "td.addTask()" class="btn" id="addBtn">
+    </div>
+    <div id="lists">
+        <div ng-repeat = "list in td.currentTodo">
+            <p id="task" ng-click = "list.done = !list.done" ng-class = "list.done ? 'grn' : 'bl'" >{{list.task}}<span id="del" ng-click="td.delete()">X</span></p>
+        </div>
+    </div>
+    <input type="button" ng-click = "td.getCurrentUser()" value="getUser">
+</div>
