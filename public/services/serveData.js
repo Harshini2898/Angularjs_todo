@@ -35,7 +35,7 @@
         }
 
         function onaddUserSuccess(response){
-            return "Adde User "+response.config.data.name;
+            return "Added User "+response.config.data.name;
         }
 
         function onaddUserError(reason){

@@ -1,33 +1,51 @@
+h2{
+  color:darkblue;
+  font-weight: bold;
+  margin-bottom:20px;
+  letter-spacing: 4px;
+}
+.content {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+}
+span{
+  background-color:rgb(236, 177, 177);
+  padding:10px;
+  border-radius: 2px;
+}
+.form-control{
+  width:500px;
+  margin-bottom:8px;
+}
 
-  input[type=text], input[type=password] {
-    width: 100%;
+form{
+  display:inline-block;  
+ 
+  text-align:left; 
+}
+#reg{
+  display:block;
+  text-align:center;
+  margin-top:150px;
   
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  
-  button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
   }
 
-  button:hover {
-    opacity: 0.8;
+.control-label{
+      color:darkblue;
+      font-size:18px;
+      letter-spacing: 3px;
   }
+.btn{
+  background-color: darkblue;
+  color:white;
+  padding:10px;
+  font-weight: bold;
+  letter-spacing: 4px;
   
-  .container {
-    padding: 16px;
-  }
-  
-  span.psw {
-    float: right;
-    padding-top: 16px;
-  }
+}
+.btn:hover{
+  background-color: blue;
+  color:white;
+}

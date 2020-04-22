@@ -13,11 +13,6 @@
                 "id": 2,
                 "task": "Run for one hour",
                 "done": false
-            },
-            {
-                "id": 3,
-                "task": "Do nature sighting",
-                "done": false
             }
         ]
     },
@@ -28,14 +23,9 @@
         "todo": []
     },
     {
-        "name": "surya",
-        "email": "surya@gmail.com",
-        "todo": []
-    },
-    {
-        "name": "aruna",
-        "email": "aruna@gmail.com",
-        "password": "aruna@)89",
+        "name": "krishna teja",
+        "email": "kteja197@gmail.com",
+        "password": "Qwerty@11",
         "todo": []
     }
 ]
