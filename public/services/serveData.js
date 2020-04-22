@@ -45,7 +45,8 @@
         function getUserById(id){
             return $http({
                 method : 'GET',
-                url : '/api/users/'+id
+                url : '/api/users/'+id,
+                data : id
             })
             .then(onGetUserSuccess)
             .catch(onGetUserError);

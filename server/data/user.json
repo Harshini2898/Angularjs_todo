@@ -26,6 +26,13 @@
         "name": "krishna teja",
         "email": "kteja197@gmail.com",
         "password": "Qwerty@11",
-        "todo": []
+        "todo": [
+
+            {
+                "id": 1,
+                "task": "sleep by 9PM",
+                "done": false
+            }
+        ]
     }
 ]
