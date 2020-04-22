@@ -7,7 +7,8 @@
             addUser :addUser,
             getUser : getUser,
             getUserById : getUserById,
-            addTodo : addTodo
+            addTodo : addTodo,
+            updateTodoById : updateTodoById
         }
         function getUser(){
             return $http({
@@ -55,7 +56,7 @@
         function addTodo(id, newTodo){
             return $http({
                 method:'PUT',
-                url :'/api/users'+id,
+                url :'/api/users/'+id,
                 data : newTodo
             })
             .then(onaddTodoSuccess)
@@ -66,6 +67,22 @@
             return "updated todo "+response.config.data.task;
         }
         function onaddTodoError(reason){
+            return $q.reject("error while updating todo Http Status "+reason.status);
+        }
+
+        function updateTodoById(id,todoId){
+            return $http({
+                method:'PUT',
+                url :'/api/users/'+id+'/'+todoId
+            })
+            .then(onUpdateTodoSuccess)
+            .catch(onUpdateTodoError);
+        }
+
+        function onUpdateTodoSuccess(response){
+            return "updated todo ";
+        }
+        function onUpdateTodoError(reason){
             return $q.reject("error while updating todo Http Status "+reason.status);
         }
     }

@@ -78,6 +78,24 @@
         }
     })
 
+    app.put('/api/users/:id/:todoId', function(req,res){
+        var data = getUsers();
+        tid = req.params.todoId;
+        var matchedUser = data.filter(function(item){
+            return item.email == req.params.id;
+        });
+        if(matchedUser.length == 0){
+            res.sendStatus(404);
+        }
+        else{
+            var userTodo = matchedUser[0].todo;
+            userTodo[tid-1].done = !userTodo[tid-1].done;
+            saveBookData(data);
+            res.sendStatus(204);
+        }
+    })
+
+
     function getUsers() {
         var data = fs.readFileSync(datafile, 'utf8');
         return JSON.parse(data);

@@ -1,13 +1,16 @@
 <div id="todoContainer">
-    <h2 id="todoHead"> Welcome user</h2>
+    <h2 id="todoHead"> Welcome {{td.userName}} <input class="btn" ng-click = "td.logout()" id="logout" type="button" value="logout" > </h2>
+    <div>
+       
+    </div>
+    
     <div id="addTodo">
-        <input type="text" ng-model = "td.task" id="inp" placeholder = "ADD A TASK">
+        <input type="text" ng-keyup = "$event.keyCode == 13 ? td.addTask() : null" ng-model = "td.task" id="inp" placeholder = "ADD A TASK">
         <input type="button" value="ADD" ng-click = "td.addTask()" class="btn" id="addBtn">
     </div>
     <div id="lists">
         <div ng-repeat = "list in td.currentTodo">
-            <p id="task" ng-click = "list.done = !list.done" ng-class = "list.done ? 'grn' : 'bl'" >{{list.task}}<span id="del" ng-click="td.delete()">X</span></p>
+            <p id="task" ng-click = "td.changeDone(list)" ng-class = "list.done ? 'grn' : 'bl'" >{{list.task}}<span id="del" ng-click="td.delete()">X</span></p>
         </div>
     </div>
-    <input type="button" ng-click = "td.getCurrentUser()" value="getUser">
 </div>
