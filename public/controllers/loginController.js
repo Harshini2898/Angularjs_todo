@@ -1,11 +1,11 @@
 (function(){
   angular.module('app')
-      .controller('loginController', ['serveData', '$log','$location' , loginController]);
+      .controller('loginController', ['serveData', '$log','$location' ,'currentUser', loginController]);
 
-  function loginController(serveData, $log, $location){
+  function loginController(serveData, $log, $location, currentUser){
 
       var vm = this;
-      vm.currentUser = {};
+      vm.currentUser = currentUser.User;
       vm.invaildUser=false;
       vm.invalidPassword = false;
 
@@ -27,7 +27,7 @@
         console.log(vm.currentUser.password);
         if(response.email == vm.currentUser.email && response.password == vm.currentUser.password)
         {
-          $location.path('/');
+          $location.path('/todo');
         }
         else
         {

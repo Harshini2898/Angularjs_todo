@@ -5,8 +5,8 @@
     function currentUser(){
        
         var User = {
-            email : 'harshini2898@gmail.com',
-            password: 'harshu@08'
+            email : '',
+            password: ''
         }
         
         return {
