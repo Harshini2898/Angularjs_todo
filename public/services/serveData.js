@@ -4,7 +4,30 @@
 
     function serveData($http, $q){
         return {
-            addUser :addUser
+            addUser :addUser,
+            getUserById :getUserById
+        }
+
+        function getUserById(id){
+            return $http({
+                method:'GET',
+                url :'/api/users/' +id,
+                data : id
+            })
+            .then(onSuccess)
+            .catch(onError);
+
+        }
+
+        function onSuccess(response)
+        {
+
+            return response.data;
+        }
+
+        function onError(reason)
+        {
+            return $q.reject("Error while retrieving data HTPP status "+reason.status);
         }
 
         function addUser(newUser){
@@ -18,7 +41,7 @@
         }
 
         function onaddUserSuccess(response){
-            return "Adde User "+response.config.data.name;
+            return "Added User "+response.config.data.name;
         }
 
         function onaddUserError(reason){

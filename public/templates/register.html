@@ -18,7 +18,7 @@
         </div>
         <div class="form-group">
             <label for="Password" class="control-label">Password</label>
-                <input type="password" name = "Password" ng-model = "reg.newUser.pwd" class="form-control" id="Password" placeholder="Password" ng-minlength = "8" ng-required="true">
+                <input type="password" name = "Password" ng-model = "reg.newUser.password" class="form-control" id="Password" placeholder="Password" ng-minlength = "8" ng-required="true">
                 <span ng-show = "registerForm.Password.$touched && registerForm.Password.$error.required">Password required</span>
                 <span ng-show = "registerForm.Password.$touched && registerForm.Password.$error.minlength">Password should be minimum of 8 charcaters</span>
            

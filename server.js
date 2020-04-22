@@ -22,12 +22,25 @@
 
     });
 
+    app.get('/api/users/:id', function(req,res){
+        var data = getUsers();
+        var matchedUser = data.filter(function(item){
+            return item.email == req.params.id;
+        });
+        if(matchedUser.length == 0){
+            res.sendStatus(404);
+        }
+        else{
+            res.send(matchedUser[0]);
+        }
+    })
+    
     app.post('/api/users', function (req, res) {
         var data = getUsers();
         var newUser = {
             name: req.body.name,
             email: req.body.email,
-            pwd: req.body.pwd,
+            password: req.body.password,
             todo: []
         };
 
