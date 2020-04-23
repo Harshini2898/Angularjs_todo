@@ -17,7 +17,6 @@
 
       function onSuccess(response)
       {
-
         console.log("in onSuccess");
         console.log(response.password);
         console.log(vm.currentUser.password);

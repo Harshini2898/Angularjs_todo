@@ -8,7 +8,7 @@
 <br>
 <div class="form-group">
          <label class="control-label" for="pswd"><b>Password</b></label>
-          <input class="form-control" type="password" ng-model="log.currentUser.password" placeholder="Enter Password" name="pswd" required>
+          <input class="form-control" ng-keyup = "$event.keyCode == 13 ? log.currentUserData() : null" type="password" ng-model="log.currentUser.password" placeholder="Enter Password" name="pswd" required>
         </div>
  <br>
  <div class="form-group">
@@ -16,11 +16,11 @@
                 <input type="button" ng-click = "log.currentUserData()" value="login" class="btn">
                 </div>
         </div>
-        </div>
+        
 
         <div>
                 <span class="error" ng-show = log.invaildUser >User not found please register <a href="#/register"> Register here</a> </span>
-                <span class="error" ng-show =log.invalidPassword >Incorrect password  <a href="#/login"> Login here </a> </span>
+                <span class="error" ng-show =log.invalidPassword >Incorrect password </span>
                 
         </div>
 

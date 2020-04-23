@@ -11,6 +11,19 @@
     margin-bottom:4%;
     font-weight:bold;
     letter-spacing: 3px;
+    
+}
+#logout{
+    float:right;
+    padding:7px 10px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-right:1%;
+    transition: padding 0.5s, background-color 0.5s;
+}
+#logout:hover{
+    padding:8px 12px;
+    background-color: rgb(19, 39, 221);
 }
 
 #inp{
@@ -38,6 +51,11 @@
     padding:7px 10px;
     font-weight: bold;
     letter-spacing: 4px;
+    transition: padding 0.5s, background-color 0.5s;
+}
+#addBtn:hover{
+    padding:8px 12px;
+    background-color: rgb(19, 39, 221);
 }
 #lists{
     width:100%;
@@ -46,7 +64,7 @@
 }
 #task{
     display:inline-block;
-   
+   margin-bottom:1%;
     padding : 12px 10px;
     font-weight: bold;
     font-size:18px;
@@ -55,18 +73,26 @@
     border-radius:10px;
     letter-spacing: 3px;
     cursor:pointer;
+    transition: padding 0.5s, background-color 0.5s, box-shadow 0.5s;
+    
 }
+#task:hover{
+    padding:17px 15px;
+    box-shadow: 5px 10px #888888;
+}
+
 .grn{
     background-image:linear-gradient(to left, rgb(2, 54, 9),rgb(7, 145, 26));
+    
 }
 .bl{
     background-image: linear-gradient(to left,rgb(6, 14, 83), rgb(16, 36, 218));
 }
 #del{
-    float:right;
+    float:middle;
     padding-right:5px;
     color:rgb(245, 79, 79);
-    font-size:20px;
+    font-size:40px;
 }
 .btn:focus{
     color:white;

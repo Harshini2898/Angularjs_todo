@@ -7,7 +7,9 @@
             addUser :addUser,
             getUser : getUser,
             getUserById : getUserById,
-            addTodo : addTodo
+            addTodo : addTodo,
+            updateTodoById : updateTodoById,
+            deleteTodoById : deleteTodoById
         }
         function getUser(){
             return $http({
@@ -56,7 +58,7 @@
         function addTodo(id, newTodo){
             return $http({
                 method:'PUT',
-                url :'/api/users'+id,
+                url :'/api/users/'+id,
                 data : newTodo
             })
             .then(onaddTodoSuccess)
@@ -68,6 +70,38 @@
         }
         function onaddTodoError(reason){
             return $q.reject("error while updating todo Http Status "+reason.status);
+        }
+
+        function updateTodoById(id,todoId){
+            return $http({
+                method:'PUT',
+                url :'/api/users/'+id+'/'+todoId
+            })
+            .then(onUpdateTodoSuccess)
+            .catch(onUpdateTodoError);
+        }
+
+        function onUpdateTodoSuccess(response){
+            return "updated todo ";
+        }
+        function onUpdateTodoError(reason){
+            return $q.reject("error while updating todo Http Status "+reason.status);
+        }
+
+        function deleteTodoById(id,todoId){
+            return $http({
+                method : 'DELETE',
+                url :'/api/users/'+id+'/'+todoId,
+            })
+            .then(onDeleteSuccess)
+            .catch(onDeleteError);
+        }
+    
+        function onDeleteSuccess(response){
+            return "deleted todo ";
+        }
+        function onDeleteError(reason){
+            return $q.reject("error while deleting todo Http Status "+reason.status);
         }
     }
 })();

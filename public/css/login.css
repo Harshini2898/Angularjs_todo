@@ -25,7 +25,7 @@ form{
  
   text-align:left; 
 }
-#reg{
+#logReg{
   display:block;
   text-align:center;
   margin-top:150px;
@@ -48,4 +48,9 @@ form{
 .btn:hover{
   background-color: blue;
   color:white;
+}
+
+.btn:focus{
+  color:white;
+
 }
