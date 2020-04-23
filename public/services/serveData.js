@@ -8,7 +8,8 @@
             getUser : getUser,
             getUserById : getUserById,
             addTodo : addTodo,
-            updateTodoById : updateTodoById
+            updateTodoById : updateTodoById,
+            deleteTodoById : deleteTodoById
         }
         function getUser(){
             return $http({
@@ -84,6 +85,22 @@
         }
         function onUpdateTodoError(reason){
             return $q.reject("error while updating todo Http Status "+reason.status);
+        }
+
+        function deleteTodoById(id, todoId){
+            return $http({
+                method:'DELETE',
+                url :'/api/users/'+id+'/'+todoId
+            })
+            .then(onDeleteTodoSuccess)
+            .catch(onDeleteTodoError);
+        }
+
+        function onDeleteTodoSuccess(response){
+            return "deleted todo";
+        }
+        function onDeleteTodoError(reason){
+            return $q.reject("error while deleting todo HTpp Status "+reason.status);
         }
     }
 })();

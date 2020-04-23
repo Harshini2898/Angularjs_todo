@@ -95,6 +95,29 @@
         }
     })
 
+    app.delete('/api/users/:id/:todoId', function(req,res){
+        var data = getUsers();
+        tid = req.params.todoId;
+        var matchedUser = data.filter(function(item){
+            return item.email == req.params.id;
+        });
+        if(matchedUser.length == 0){
+            res.sendStatus(404);
+        }
+        else{
+            var userTodo = matchedUser[0].todo;
+            userTodo.splice(tid-1, 1);
+            todoLength = userTodo.length;
+            if(todoLength >= tid){
+                for(var i=tid-1; i<todoLength ;i++){
+                    userTodo[i].id= userTodo[i].id-1;
+                }
+            }
+            saveBookData(data);
+            res.sendStatus(204);
+        }
+    })
+
 
     function getUsers() {
         var data = fs.readFileSync(datafile, 'utf8');

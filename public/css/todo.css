@@ -4,7 +4,7 @@
     height:100%;
     margin:0;
 }
-
+ 
 #todoHead{
     margin-top:3%;
     color:darkblue;
@@ -25,7 +25,7 @@
     padding:8px 12px;
     background-color: rgb(19, 39, 221);
 }
-
+ 
 #inp{
     text-align:center;
     width:45%;
@@ -80,7 +80,7 @@
     padding:17px 15px;
     box-shadow: 5px 10px #888888;
 }
-
+ 
 .grn{
     background-image:linear-gradient(to left, rgb(2, 54, 9),rgb(7, 145, 26));
     

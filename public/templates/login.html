@@ -1,28 +1,32 @@
 <div id="log" class="content">
-        <h2 id="logHead" >Login</h2>
-      <form action="" name="loginForm">
-        <div class="form-group">
-        <label for="uid" class="control-label"><b>Login ID</b></label>
-        <input class="form-control" type="email" ng-model="log.currentUser.email"  placeholder="Enter Username" name="email" required>
-        </div>
-<br>
-<div class="form-group">
-         <label class="control-label" for="pswd"><b>Password</b></label>
-          <input class="form-control" ng-keyup = "$event.keyCode == 13 ? log.currentUserData() : null" type="password" ng-model="log.currentUser.password" placeholder="Enter Password" name="pswd" required>
-        </div>
- <br>
- <div class="form-group">
-        <div class="">
-                <input type="button" ng-click = "log.currentUserData()" value="login" class="btn">
+        <h2 id="logHead">Login</h2>
+        <form action="" name="loginForm">
+                <div class="form-group">
+                        <label for="uid" class="control-label"><b>Email ID</b></label>
+                        <input class="form-control" type="email" ng-model="log.currentUser.email"
+                                placeholder="Enter Username" name="email" required>
                 </div>
-        </div>
-        
+                <br>
+                <div class="form-group">
+                        <label class="control-label" for="pswd"><b>Password</b></label>
+                        <input class="form-control" ng-keyup="$event.keyCode == 13 ? log.currentUserData() : null"
+                                type="password" ng-model="log.currentUser.password" placeholder="Enter Password"
+                                name="pswd" required>
+                </div>
+                <br>
+                <div class="form-group">
+                        <div class="">
+                                <input type="button" ng-click="log.currentUserData()" value="login" class="btn">
+                        </div>
+                </div>
 
-        <div>
-                <span class="error" ng-show = log.invaildUser >User not found please register <a href="#/register"> Register here</a> </span>
-                <span class="error" ng-show =log.invalidPassword >Incorrect password </span>
-                
-        </div>
 
-</form>
+                <div>
+                        <span class="error" ng-show=log.invaildUser>User not found please register <a href="#/register">
+                                        Register here</a> </span>
+                        <span class="error" ng-show=log.invalidPassword>Incorrect password </span>
+
+                </div>
+
+        </form>
 </div>

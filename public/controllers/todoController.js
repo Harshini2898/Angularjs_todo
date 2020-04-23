@@ -5,17 +5,28 @@
     function todoController(currentUser, serveData, $location){
         var vm = this;
         vm.done = false;
+        vm.deletedId = -1;
         //adding task to screen and to user.json
         vm.addTask = function(){
-            var newTask = {
-                id:vm.currentTodo.length + 1,
-                task:vm.task,
-                done:false
+            console.log(vm.task);
+            if(vm.task == undefined || vm.task == ""){
+                alert("Write some task to add");
             }
-            vm.currentTodo.push(newTask);
-           vm.task="";
-           console.log(vm.currentTodo);
-           addingTodo(newTask);
+          
+            else{
+                var newTask = {
+                    id:vm.currentTodo.length + 1,
+                    task:vm.task,
+                    done:false
+                }
+                vm.currentTodo.push(newTask);
+               vm.task="";
+               console.log(vm.currentTodo);
+               addingTodo(newTask);
+            }
+            console.log(vm.task);
+            console.log(vm.currentTodo.length);
+           
         }
 
         vm.logout = function(){
@@ -27,27 +38,38 @@
         vm.changeDone = function(list){
             list.done = !list.done;
             todoId = list.id;
-            console.log(list.done);
-            serveData.updateTodoById(currentUser.User.email, todoId)
-            .then(onUpdateTodoSuccess)
-            .catch(onUpdateTodoError)
+            if(vm.deletedId != todoId){
+                vm.deletedId = -1;
+                console.log(list.done);
+                serveData.updateTodoById(currentUser.User.email, todoId)
+                .then(onSuccess)
+                .catch(onError)
+            }
+            vm.deletedId = -1;
+           
         }
         function addingTodo(newTask){
             serveData.addTodo(currentUser.User.email,newTask)
-            .then(onUpdateTodoSuccess)
-            .catch(onUpdateTodoError)
+            .then(onSuccess)
+            .catch(onError)
         }
 
-        function onUpdateTodoSuccess(response){
+        function onSuccess(response){
             console.log(response);
         }
-        function onUpdateTodoError(reason){
+        function onError(reason){
             console.log(reason);
         }
 
-        vm.delete = function(){
+        vm.delete = function(todoId){
+            serveData.deleteTodoById(currentUser.User.email, todoId)
+            .then(onSuccess)
+            .catch(onError);
+            getCurrentUser();
             console.log("deleted");
+            vm.deletedId = todoId;
         }
+
 
         //getting todo List of current User
         getCurrentUser = function(){
@@ -67,7 +89,6 @@
         function onGetUserError(reason){
             console.log(reason);
         }
-        
         getCurrentUser();
     }
 })();
