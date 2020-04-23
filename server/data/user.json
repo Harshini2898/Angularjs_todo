@@ -27,12 +27,24 @@
         "email": "kteja197@gmail.com",
         "password": "Qwerty@11",
         "todo": [
-
+        
             {
                 "id": 1,
-                "task": "sleep by 9PM",
+                "task": "will complete robot",
                 "done": false
             }
         ]
+    },
+    {
+        "name": "Srujana",
+        "email": "srujana@gmail.com",
+        "password": "srujjau879",
+        "todo": []
+    },
+    {
+        "name": "sudheera",
+        "email": "sudheera@gmail.com",
+        "password": "sudheera@08",
+        "todo": []
     }
 ]

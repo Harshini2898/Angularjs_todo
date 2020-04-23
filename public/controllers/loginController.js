@@ -2,7 +2,7 @@
   angular.module('app')
       .controller('loginController', ['serveData','currentUser', '$log','$location' , loginController]);
 
-  function loginController(currentUser,serveData, $log, $location){
+  function loginController(serveData,currentUser, $log, $location){
 
       var vm = this;
       vm.currentUser =  currentUser.User;

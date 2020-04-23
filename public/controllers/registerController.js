@@ -44,7 +44,7 @@
 
         function onSuccess(response) {
             $log.info(response);
-            $location.path('/todo');
+            $location.path('/login');
 
         }
 
