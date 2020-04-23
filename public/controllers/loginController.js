@@ -1,17 +1,13 @@
 (function(){
   angular.module('app')
-      .controller('loginController', ['serveData', '$log','$location' ,'currentUser', loginController]);
+      .controller('loginController', ['serveData','currentUser', '$log','$location' , loginController]);
 
-  function loginController(serveData, $log, $location, currentUser){
+  function loginController(serveData,currentUser, $log, $location){
 
       var vm = this;
-      vm.currentUser = currentUser.User;
+      vm.currentUser =  currentUser.User;
       vm.invaildUser=false;
       vm.invalidPassword = false;
-
-      vm.print = function(){
-        console.log("button called");
-      }
 
       vm.currentUserData = function(){
         serveData.getUserById(vm.currentUser.email)

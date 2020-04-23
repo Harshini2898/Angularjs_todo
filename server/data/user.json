@@ -1,1 +1,73 @@
-[{"name":"Harshini","email":"harshini2898@gmail.com","password":"harshu@08","todo":[{"id":1,"task":"complete college course","done":true},{"id":2,"task":"play shuttle","done":false}]},{"name":"Sanju","email":"sanju@gmail.com","password":"sanju@08","todo":[]},{"name":"krishna teja","email":"kteja197@gmail.com","password":"Qwerty@11","todo":[]},{"name":"Srujana","email":"srujana@gmail.com","password":"srujjau879","todo":[{"id":1,"task":"Be a Event Manager","done":false}]},{"name":"sudheera","email":"sudheera@gmail.com","password":"sudheera@08","todo":[]},{"name":"prasanth","email":"prasanth@gmail.com","password":"prasanth@08","todo":[{"id":1,"task":"Complete assignment","done":false}]},{"name":"niha","email":"baby.satya08@gmail.com","password":"satya@08","todo":[]},{"name":"srinu","email":"srinu@gmail.com","password":"43122613","todo":[]}]
+[
+    {
+        "name": "Harshini",
+        "email": "harshini2898@gmail.com",
+        "password": "harshu@08",
+        "todo": [
+            {
+                "id": 1,
+                "task": "complete college course",
+                "done": true
+            },
+            {
+                "id": 2,
+                "task": "play shuttle",
+                "done": false
+            }
+        ]
+    },
+    {
+        "name": "Sanju",
+        "email": "sanju@gmail.com",
+        "password": "sanju@08",
+        "todo": []
+    },
+    {
+        "name": "krishna teja",
+        "email": "kteja197@gmail.com",
+        "password": "Qwerty@11",
+        "todo": []
+    },
+    {
+        "name": "Srujana",
+        "email": "srujana@gmail.com",
+        "password": "srujjau879",
+        "todo": [
+            {
+                "id": 1,
+                "task": "Be a Event Manager",
+                "done": false
+            }
+        ]
+    },
+    {
+        "name": "sudheera",
+        "email": "sudheera@gmail.com",
+        "password": "sudheera@08",
+        "todo": []
+    },
+    {
+        "name": "prasanth",
+        "email": "prasanth@gmail.com",
+        "password": "prasanth@08",
+        "todo": [
+            {
+                "id": 1,
+                "task": "Complete assignment",
+                "done": false
+            }
+        ]
+    },
+    {
+        "name": "niha",
+        "email": "baby.satya08@gmail.com",
+        "password": "satya@08",
+        "todo": []
+    },
+    {
+        "name": "srinu",
+        "email": "srinu@gmail.com",
+        "password": "43122613",
+        "todo": []
+    }
+]

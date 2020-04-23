@@ -47,7 +47,8 @@
         function getUserById(id){
             return $http({
                 method : 'GET',
-                url : '/api/users/'+id
+                url : '/api/users/'+id,
+                data : id
             })
             .then(onGetUserSuccess)
             .catch(onGetUserError);
@@ -87,20 +88,20 @@
             return $q.reject("error while updating todo Http Status "+reason.status);
         }
 
-        function deleteTodoById(id, todoId){
+        function deleteTodoById(id,todoId){
             return $http({
-                method:'DELETE',
+                method : 'DELETE',
                 url :'/api/users/'+id+'/'+todoId
             })
-            .then(onDeleteTodoSuccess)
-            .catch(onDeleteTodoError);
+            .then(onDeleteSuccess)
+            .catch(onDeleteError);
         }
-
-        function onDeleteTodoSuccess(response){
-            return "deleted todo";
+    
+        function onDeleteSuccess(response){
+            return "deleted todo ";
         }
-        function onDeleteTodoError(reason){
-            return $q.reject("error while deleting todo HTpp Status "+reason.status);
+        function onDeleteError(reason){
+            return $q.reject("error while deleting todo Http Status "+reason.status);
         }
     }
 })();

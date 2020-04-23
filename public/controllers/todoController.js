@@ -54,13 +54,6 @@
             .catch(onError)
         }
 
-        function onSuccess(response){
-            console.log(response);
-        }
-        function onError(reason){
-            console.log(reason);
-        }
-
         vm.delete = function(todoId){
             serveData.deleteTodoById(currentUser.User.email, todoId)
             .then(onSuccess)
@@ -75,7 +68,7 @@
         getCurrentUser = function(){
             serveData.getUserById(currentUser.User.email)
             .then(onGetUserSuccess)
-            .catch(onGetUserError);
+            .catch(onError);
         }
 
         function onGetUserSuccess(response){
@@ -86,7 +79,10 @@
                 
             }
         }
-        function onGetUserError(reason){
+        function onSuccess(response){
+            console.log(response);
+        }
+        function onError(reason){
             console.log(reason);
         }
         getCurrentUser();
