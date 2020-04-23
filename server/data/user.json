@@ -3,18 +3,7 @@
         "name": "Harshini",
         "email": "harshini2898@gmail.com",
         "password": "harshu@08",
-        "todo": [
-            {
-                "id": 1,
-                "task": "complete college course",
-                "done": true
-            },
-            {
-                "id": 2,
-                "task": "play shuttle",
-                "done": false
-            }
-        ]
+        "todo": []
     },
     {
         "name": "Sanju",

@@ -8,11 +8,9 @@
         vm.deletedId = -1;
         //adding task to screen and to user.json
         vm.addTask = function(){
-            console.log(vm.task);
             if(vm.task == undefined || vm.task == ""){
                 alert("Write some task to add");
             }
-          
             else{
                 var newTask = {
                     id:vm.currentTodo.length + 1,
@@ -24,9 +22,6 @@
                console.log(vm.currentTodo);
                addingTodo(newTask);
             }
-            console.log(vm.task);
-            console.log(vm.currentTodo.length);
-           
         }
 
         vm.logout = function(){
