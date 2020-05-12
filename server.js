@@ -10,6 +10,7 @@
 
     //to acces files in public folder(front end view)
     app.use(express.static('public'));
+    app.use(express.static('lib'));
 
     //configuring app to use bodyParser
     app.use(bodyParser.json());

@@ -31,9 +31,9 @@
         }
 
         vm.changeDone = function(list){
-            list.done = !list.done;
             todoId = list.id;
             if(vm.deletedId != todoId){
+                list.done = !list.done;
                 vm.deletedId = -1;
                 console.log(list.done);
                 serveData.updateTodoById(currentUser.User.email, todoId)
@@ -41,7 +41,6 @@
                 .catch(onError)
             }
             vm.deletedId = -1;
-           
         }
         function addingTodo(newTask){
             serveData.addTodo(currentUser.User.email,newTask)
@@ -68,7 +67,6 @@
 
         function onGetUserSuccess(response){
             if(response != 0){
-                console.log(currentUser.User.email);
                 vm.userName = response.name;
                 vm.currentTodo = response.todo;
                 

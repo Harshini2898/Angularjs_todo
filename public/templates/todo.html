@@ -1,16 +1,19 @@
 <div id="todoContainer">
-    <h2 id="todoHead"> Welcome {{td.userName}} <input class="btn" ng-click = "td.logout()" id="logout" type="button" value="logout" > </h2>
+    <h2 id="todoHead"> Welcome {{td.userName}} <input class="btn" ng-click="td.logout()" id="logout" type="button"
+            value="logout"> </h2>
     <div>
-       
+
     </div>
-    
+
     <div id="addTodo">
-        <input type="text" ng-keyup = "$event.keyCode == 13 ? td.addTask() : null" ng-model = "td.task" id="inp" placeholder = "ADD A TASK">
-        <input type="button" value="ADD" ng-click = "td.addTask()" class="btn" id="addBtn">
+        <input type="text" ng-keyup="$event.keyCode == 13 ? td.addTask() : null" ng-model="td.task" id="inp"
+            placeholder="ADD A TASK">
+        <input type="button" value="ADD" ng-click="td.addTask()" class="btn" id="addBtn">
     </div>
     <div id="lists">
-        <div ng-repeat = "list in td.currentTodo">
-            <p id="task" ng-click = "td.changeDone(list)" ng-class = "list.done ? 'grn' : 'bl'" >{{list.task}}<span id="del" ng-click="td.delete(list.id)">X</span></p>
+        <div ng-repeat="list in td.currentTodo">
+            <p id="task" ng-click="td.changeDone(list)" ng-class="list.done ? 'grn' : 'bl'">{{list.task}}<span id="del"
+                    ng-click="td.delete(list.id)">X</span></p>
         </div>
     </div>
 </div>

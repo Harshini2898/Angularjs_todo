@@ -13,15 +13,14 @@
                 .then(onGetUserDataSuccess)
                 .catch(onGetUserDataError);
         }
-
         function onGetUserDataSuccess(response) {
             response.forEach(uniqueCheck);
             if (!vm.duplicate) {
+                console.log("inside succes");
                 addNewUser(vm.newUser);
             }
             else {
                 console.log(vm.duplicate);
-
             }
         }
 
@@ -54,3 +53,4 @@
 
     }
 })();
+
