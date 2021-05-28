@@ -1,26 +1,14 @@
 [
-    {
-        "name": "Harshini",
-        "email": "harshini2898@gmail.com",
-        "password": "harshu@08",
-        "todo": [
-            {
-                "id": 1,
-                "task": "complete rpotrait",
-                "done": true
-            }
-        ]
-    },
-    {
-        "name": "Sanju",
-        "email": "sanju@gmail.com",
-        "password": "sanju@08",
-        "todo": []
-    },
-    {
-        "name": "krishna teja",
-        "email": "kteja197@gmail.com",
-        "password": "Qwerty@11",
-        "todo": []
-    }
+  {
+    "name": "Harshini",
+    "email": "harshini2898@gmail.com",
+    "password": "harshu89",
+    "todo": [
+      {
+        "id": 1,
+        "task": "complete portrait",
+        "done": true
+      }
+    ]
+  }
 ]
