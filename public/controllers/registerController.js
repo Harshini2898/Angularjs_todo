@@ -7,6 +7,7 @@
         var vm = this;
         vm.newUser = {};
         vm.duplicate = false;
+        vm.testing = false;
 
         vm.getUserData = function () {
             serveData.getUser()

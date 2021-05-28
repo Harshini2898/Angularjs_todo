@@ -12,8 +12,10 @@
     </div>
     <div id="lists">
         <div ng-repeat="list in td.currentTodo">
-            <p id="task" ng-click="td.changeDone(list)" ng-class="list.done ? 'grn' : 'bl'">{{list.task}}<span id="del"
-                    ng-click="td.delete(list.id)">X</span></p>
+            <p id="task" ng-click="td.changeDone(list)" ng-class="list.done ? 'grn' : 'bl'">
+                <span ng-if = "!list.done">{{list.task}}</span>
+                <s><span ng-if = "list.done" id="te"> {{list.task}}</span></s>
+                <span id="del" ng-click="td.delete(list.id)">X</span></p>
         </div>
     </div>
 </div>

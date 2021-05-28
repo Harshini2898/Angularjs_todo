@@ -2,16 +2,16 @@
     angular.module('app')
     .factory('serveData', serveData);
 
-    function serveData($http, $q){
-        return {
-            addUser :addUser,
-            getUser : getUser,
-            getUserById : getUserById,
-            addTodo : addTodo,
-            updateTodoById : updateTodoById,
-            deleteTodoById : deleteTodoById
+    function serveData($http, $q, currentUser){
+       
+        function initialize(){
+            var serv = angular.extend({}, currentUser);
+            console.log("service extension "+serv.User.email);
         }
+        initialize();
+        
         function getUser(){
+           
             return $http({
                 method:'GET',
                 url: '/api/users'
@@ -23,7 +23,7 @@
             return response.data;
         }
         function onGetUserError(reason){
-            return $q.reject("Error while retrieving data HTPP statu "+reason.status);
+            return $q.reject("Error while retrieving data HTPP status "+reason.status);
         }
 
         function addUser(newUser){
@@ -45,6 +45,7 @@
         }
 
         function getUserById(id){
+            initialize();
             return $http({
                 method : 'GET',
                 url : '/api/users/'+id,
@@ -54,6 +55,9 @@
             .catch(onGetUserError);
         }
 
+        function testing(fun){
+            return fun+200;
+        }
         //updating user todo
         function addTodo(id, newTodo){
             return $http({
@@ -103,5 +107,15 @@
         function onDeleteError(reason){
             return $q.reject("error while deleting todo Http Status "+reason.status);
         }
+        return {
+            addUser :addUser,
+            getUser : getUser,
+            getUserById : getUserById,
+            addTodo : addTodo,
+            updateTodoById : updateTodoById,
+            deleteTodoById : deleteTodoById,
+            testing : testing
+        }
+
     }
 })();
