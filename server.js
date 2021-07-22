@@ -7,6 +7,7 @@
     const datafile = 'server/data/user.json';
     const fs = require('fs');
     var bodyParser = require('body-parser');
+    const PORT = process.env.PORT || 3500;
 
     //to acces files in public folder(front end view)
     app.use(express.static('public'));
@@ -147,7 +148,7 @@
         });
     }
 
-    app.listen(3500, function () {
+    app.listen(PORT, function () {
         console.log("listening on 3500 port ");
     })
 
