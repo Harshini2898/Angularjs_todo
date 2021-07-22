@@ -122,10 +122,6 @@
         }
     })
 
-    app.get('', function(req, res){
-        res.send('Hello World');
-    });
-
     function getUsers() {
         var data = fs.readFileSync(datafile, 'utf8');
         return JSON.parse(data);
@@ -139,14 +135,6 @@
         })
     }
 
-    if(process.env.NODE_ENV === 'production') {
-        app.use(express.static("public"));
-        app.use(express.static("lib"));
-
-        app.get("*", (req,res) => {
-            res.sendFile(path.resolve(__dirname, "public", "index.html"))
-        });
-    }
 
     app.listen(PORT, function () {
         console.log("listening on 3500 port ");
