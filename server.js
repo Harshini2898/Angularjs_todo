@@ -23,6 +23,8 @@
 
     });
 
+
+
     app.get('/api/users/:id', function(req,res){
         var data = getUsers();
         var matchedUser = data.filter(function(item){
@@ -132,6 +134,16 @@
             }
         })
     }
+
+    if(process.env.NODE_ENV === 'production') {
+        app.use(express.static("public"));
+        app.use(express.static("lib"));
+
+        app.get("*", (req,res) => {
+            res.sendFile(path.resolve(__dirname, "public", "index.html"))
+        });
+    }
+
     app.listen(3500, function () {
         console.log("listening on 3500 port ");
     })
