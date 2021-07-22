@@ -121,6 +121,9 @@
         }
     })
 
+    app.get('', function(req, res){
+        res.send('Hello World');
+    });
 
     function getUsers() {
         var data = fs.readFileSync(datafile, 'utf8');
